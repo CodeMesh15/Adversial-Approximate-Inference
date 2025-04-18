@@ -19,5 +19,23 @@ Adversarial Approximate Inference for Speech to Electroglottograph Conversion A 
 ---
 
 ## 🛠️ Architecture Overview
+Speech → Encoder → Latent z  
+            ↓  
+ +-------- Adversarial Alignment --------+  
+ ↓                      ↓  
+Decoder            → Reconstructed EGG
+
+- **Encoder**: Converts speech into a latent representation.
+- **Decoder**: Generates EGG from the latent code.
+- **Discriminator**: Aligns latent codes of speech and EGG via adversarial loss.
+
+---
+
+## 📦 Installation
+
+```bash
+git clone https://github.com/<your-username>/adversarial-approximate-inference.git
+cd adversarial-approximate-inference
+pip install -r requirements.txt
 
 
